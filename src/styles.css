@@ -1,0 +1,180 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Manrope", system-ui, sans-serif;
+}
+
+:root {
+  --radius: 1rem;
+  /* Aurora Glass Regal — deep ink navy, gold leaf, blush, ivory */
+  --background: oklch(0.13 0.025 267);
+  --foreground: oklch(0.94 0.022 92);
+  --card: oklch(0.165 0.028 267);
+  --card-foreground: oklch(0.94 0.022 92);
+  --popover: oklch(0.165 0.028 267);
+  --popover-foreground: oklch(0.94 0.022 92);
+  --primary: oklch(0.72 0.115 92);
+  --primary-foreground: oklch(0.13 0.025 267);
+  --secondary: oklch(0.2 0.03 267);
+  --secondary-foreground: oklch(0.94 0.022 92);
+  --muted: oklch(0.2 0.03 267);
+  --muted-foreground: oklch(0.94 0.022 92 / 60%);
+  --accent: oklch(0.76 0.1 10);
+  --accent-foreground: oklch(0.94 0.022 92);
+  --destructive: oklch(0.63 0.2 25);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 10%);
+  --ring: oklch(0.72 0.115 92 / 60%);
+  --gold: oklch(0.72 0.115 92);
+  --gold-soft: oklch(0.8 0.09 92);
+  --blush: oklch(0.76 0.1 10);
+  --ink-2: oklch(0.165 0.028 267);
+  --chart-1: oklch(0.72 0.115 92);
+  --chart-2: oklch(0.76 0.1 10);
+  --chart-3: oklch(0.6 0.1 250);
+  --chart-4: oklch(0.8 0.09 92);
+  --chart-5: oklch(0.94 0.022 92);
+  --sidebar: var(--card);
+  --sidebar-foreground: var(--card-foreground);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: var(--muted);
+  --sidebar-accent-foreground: var(--foreground);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
+}
+
+.dark {
+  --background: oklch(0.13 0.025 267);
+  --foreground: oklch(0.94 0.022 92);
+  --card: oklch(0.165 0.028 267);
+  --card-foreground: oklch(0.94 0.022 92);
+  --popover: oklch(0.165 0.028 267);
+  --popover-foreground: oklch(0.94 0.022 92);
+  --primary: oklch(0.72 0.115 92);
+  --primary-foreground: oklch(0.13 0.025 267);
+  --secondary: oklch(0.2 0.03 267);
+  --secondary-foreground: oklch(0.94 0.022 92);
+  --muted: oklch(0.2 0.03 267);
+  --muted-foreground: oklch(0.94 0.022 92 / 60%);
+  --accent: oklch(0.76 0.1 10);
+  --accent-foreground: oklch(0.94 0.022 92);
+  --destructive: oklch(0.63 0.2 25);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 10%);
+  --ring: oklch(0.72 0.115 92 / 60%);
+  --chart-1: oklch(0.72 0.115 92);
+  --chart-2: oklch(0.76 0.1 10);
+  --chart-3: oklch(0.6 0.1 250);
+  --chart-4: oklch(0.8 0.09 92);
+  --chart-5: oklch(0.94 0.022 92);
+  --sidebar: var(--card);
+  --sidebar-foreground: var(--card-foreground);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: var(--muted);
+  --sidebar-accent-foreground: var(--foreground);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
+}
+
+@theme inline {
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-blush: var(--blush);
+  --color-ink-2: var(--ink-2);
+  --color-ivory: var(--foreground);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-body);
+  }
+}
+
+/* Aurora hero backdrop */
+@utility bg-aurora {
+  background:
+    radial-gradient(60% 55% at 18% 12%, color-mix(in oklab, var(--gold) 30%, transparent), transparent 60%),
+    radial-gradient(55% 50% at 85% 20%, color-mix(in oklab, var(--blush) 22%, transparent), transparent 60%),
+    radial-gradient(70% 60% at 60% 95%, rgba(70, 110, 160, 0.28), transparent 65%),
+    var(--background);
+}
+
+@utility glass {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(14px);
+}
+
+@utility text-shimmer {
+  background: linear-gradient(100deg, var(--gold) 20%, #fff2c4 42%, var(--gold) 62%);
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: sheen 6s linear infinite;
+}
+
+@utility orn {
+  width: 56px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+@keyframes sheen {
+  0% {
+    background-position: 0% 0;
+  }
+  100% {
+    background-position: 220% 0;
+  }
+}
